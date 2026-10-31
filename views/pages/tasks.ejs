@@ -10,7 +10,13 @@
     <tbody>
         <% for (const task of tasks) { %>
             <tr>
-                <td><input type="checkbox" name="" id="" checked=<%=task.isFinished%>></td>
+                <td>
+                    <!-- data-id is just a real world example -->
+                    <input type="checkbox" name="" id=""
+                        <%= task.isFinished ? 'checked' : '' %>
+                        data-id="<%= task._id %>"
+                    >
+                </td>
                 <td>
                     <%=task.title %>
                 </td>
@@ -34,3 +40,4 @@
             <% } %>
     </tbody>
 </table>
+<script src="/js/tasks.js"></script>

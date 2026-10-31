@@ -50,15 +50,11 @@
           Edit task
         </a>
 
-        <form
-          action="/tasks/<%= task.id %>/delete"
-          method="POST"
-          onsubmit="return confirm('Are you sure you want to delete this task?');"
-        >
+        <form action="/tasks/<%= task.id %>?_method=DELETE" method="POST" class="d-inline" >
           <button type="submit" class="btn btn-danger">Delete task</button>
         </form>
 
-        <form action="/tasks/<%= task.id %>/toggle" method="POST" class="ms-auto">
+        <form action="/tasks/<%= task.id %>/toggle?_method=PATCH" method="POST" class="ms-auto">
           <% if (task.isFinished) { %>
             <button type="submit" class="btn btn-outline-warning">
               Mark as not finished
