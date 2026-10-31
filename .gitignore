@@ -1,2 +1,9 @@
+# Local environment variables and secrets (NEVER commit these)
 .env
 .env.*
+
+# Dependencies
+node_modules/
+jspm_packages/
+web_modules/
+.pnpm-store/
