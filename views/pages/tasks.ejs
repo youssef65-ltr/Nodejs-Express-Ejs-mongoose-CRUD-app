@@ -1,0 +1,36 @@
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <td>finished</td>
+            <td>title</td>
+            <td>description</td>
+            <td>actions</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% for (const task of tasks) { %>
+            <tr>
+                <td><input type="checkbox" name="" id="" checked=<%=task.isFinished%>></td>
+                <td>
+                    <%=task.title %>
+                </td>
+                <td>
+                    <%=task.description %>
+                </td>
+                <td>
+                    <form action="/tasks/<%= task.id %>?_method=DELETE" method="POST" class="d-inline">
+                        <button type="submit" class="border-0 bg-transparent">
+                            <img src="/images/trash3.svg" alt="" class="btn btn-danger" type="button">
+                        </button>
+                    </form>
+                    <a href="/tasks/<%=task._id%>/edit" >
+                        <img src="/images/pencil-square.svg" alt="" class="btn btn-info">
+                    </a>
+                    <a href="/tasks/<%=task._id%>" class="">
+                        <img src="/images/eye.svg" alt="" class="btn btn-primary">
+                    </a>
+                </td>
+            </tr>
+            <% } %>
+    </tbody>
+</table>
