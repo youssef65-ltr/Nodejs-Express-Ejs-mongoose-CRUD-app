@@ -26,29 +26,18 @@ More features will be added in the future.
 
 ## Task Model
 
-| Field         | Type    | Description                     |
-| ------------- | ------- | ------------------------------- |
-| `title`       | String  | Name of the task                |
-| `description` | String  | More details about the task     |
-| `isFinished`  | Boolean | `true` if the task is done      |
-| `createdAt`   | Date    | Date when the task was created  |
+| Field         | Type    | Description                                     |
+| ------------- | ------- | ----------------------------------------------- |
+| `title`       | String  | Name of the task                                |
+| `description` | String  | More details about the task                     |
+| `isFinished`  | Boolean | default `false` and `true` if the task is done  |
+| `createdAt`   | Date    | Date when the task was created                  |
 
 ## Project Structure
 
 ```
-task-manager/
-├── src/
-    ├──controllers/    # Logic for each route
-├── models/         # Mongoose schemas
-├── routes/         # Express routes
-├── views/          # EJS templates
-├── public/         # Static files (CSS, images, JS)
-├── .env            # Environment variables (not pushed to GitHub)
-├── .gitignore
-├── app.js          # Entry point
-└── package.json
-```
 my-express-app/
+├── public/                 # Static files (CSS, images, JS)
 ├── src/
 │   ├── config/             # Environment variables & third-party configurations
 │   ├── controllers/        # Logic for each route
@@ -56,10 +45,12 @@ my-express-app/
 │   ├── routes/             # Express routes
 │   ├── app.js              # Initializes Express instance and global middlewares
 │   └── server.js           # App entry point (binds to port and starts the server)
+├── views/                  # EJS templates
 ├── .env                    # Hidden environment variables file
 ├── .gitignore              # Files to ignore in git (node_modules, .env)
-├── package.json            # Dependencies and npm scripts
+├── package.json            
 └── README.md  
+```
 
 > Change this structure if your folders have different names.
 
@@ -77,8 +68,8 @@ Before you start, install:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/youssef65-ltr/Nodejs-Express-Ejs-mongoose-CRUD-app.git
+   cd Nodejs-Express-Ejs-mongoose-CRUD-app
    ```
 
 2. **Install dependencies**
@@ -125,13 +116,6 @@ Before you start, install:
 | `npm start`     | Starts the app                      |
 | `npm run dev`   | Starts the app with nodemon         |
 
-## Contributing
-
-1. Fork the project
-2. Create a new branch: `git checkout -b feature/my-feature`
-3. Commit your changes: `git commit -m "feat: add my feature"`
-4. Push the branch: `git push origin feature/my-feature`
-5. Open a Pull Request
 
 ## License
 
