@@ -9,7 +9,7 @@ Users can create, read, update, and delete tasks (CRUD).
 - [x] View all tasks in a table
 - [x] Update a task
 - [x] Delete a task
-- [x] redis cache
+- [x] Redis cache
 - [x] Mark a task as finished
 - [ ] Search tasks
 - [ ] Sort tasks
@@ -81,9 +81,9 @@ Before you start, install:
    ```
 3. **use redis image quickly**
 
-  if you already have docker run this command :
+   if you already have docker run this command :
   
-  ```bash
+   ```bash
    docker run -d -p 6379:6379 redis
    ```
 
