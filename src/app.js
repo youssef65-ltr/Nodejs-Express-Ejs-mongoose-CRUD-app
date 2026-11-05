@@ -3,11 +3,11 @@ const connectDB = require('./config/db.js');
 const expressLayouts = require('express-ejs-layouts');
 const taskRoutes = require("./routes/taskRoutes.js");
 const methodOverride = require("method-override");
-
+const {connectCache} = require("./config/cache.js");
 
 const app = express();
 connectDB();
-
+connectCache();
 
 // Middlewares
 app.use(express.json());

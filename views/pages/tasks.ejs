@@ -24,7 +24,7 @@
                     <%=task.description %>
                 </td>
                 <td>
-                    <form action="/tasks/<%= task.id %>?_method=DELETE" method="POST" class="d-inline">
+                    <form action="/tasks/<%= task._id %>?_method=DELETE" method="POST" class="d-inline">
                         <button type="submit" class="border-0 bg-transparent">
                             <img src="/images/trash3.svg" alt="" class="btn btn-danger" type="button">
                         </button>
