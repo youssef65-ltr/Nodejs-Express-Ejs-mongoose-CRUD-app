@@ -9,7 +9,8 @@ Users can create, read, update, and delete tasks (CRUD).
 - [x] View all tasks in a table
 - [x] Update a task
 - [x] Delete a task
-- [ ] Mark a task as finished
+- [x] redis cache
+- [x] Mark a task as finished
 - [ ] Search tasks
 - [ ] Sort tasks
 - [ ] Filter tasks
@@ -22,6 +23,7 @@ More features will be added in the future.
 - **Express.js**: web framework
 - **EJS**: template engine (HTML views)
 - **MongoDB + Mongoose**: database and data models
+- **Redis**: caching and performance
 - **Architecture**: MVC (Model - View - Controller)
 
 ## Task Model
@@ -77,21 +79,29 @@ Before you start, install:
    ```bash
    npm install
    ```
+3. **use redis image quickly**
 
-3. **Create a `.env` file** in the root folder and add:
+  if you already have docker run this command :
+  
+  ```bash
+   docker run -d -p 6379:6379 redis
+   ```
+
+4. **Create a `.env` file** in the root folder and add:
 
    ```env
    PORT=3000
    MONGODB_URI=mongodb://127.0.0.1:27017/task-manager
+   REDIS_URL=redis://localhost:6379
    ```
 
    If you use MongoDB Atlas, replace `MONGODB_URI` with your Atlas connection string.
 
-4. **Start MongoDB** (only if you use a local database)
+5. **Start MongoDB** (only if you use a local database)
 
    Make sure the MongoDB service is running on your computer.
 
-5. **Run the app**
+6. **Run the app**
 
    ```bash
    npm start
@@ -103,7 +113,7 @@ Before you start, install:
    npm run dev
    ```
 
-6. **Open your browser** and go to:
+7. **Open your browser** and go to:
 
    ```
    http://localhost:3000
